@@ -1,0 +1,11 @@
+﻿@model IEnumerable<MVCCRUD.Models.Employee>
+@*@{var listItems = new List<Employee>
+    {
+              new Employee { Text = "Exemplo1", Value="Exemplo1" },
+              new ListItem { Text = "Exemplo2", Value="Exemplo2" },
+              new ListItem { Text = "Exemplo3", Value="Exemplo3" }
+        };
+    }*@
+@*@Html.DropDownList("Exemplo", new SelectList(listItems, "Value", "Text"))*@
+@Html.DropDownList("EmployeeList", (IEnumerable<SelectListItem>)ViewBag.Employee, new { id = "ddlLocations", @class = "form-control" })
+@*@Html.DropDownList("DepartmentList", (IEnumerable<SelectListItem>)ViewBag.Department, new { id = "ddlLocations", @class = "form-control" })*@
